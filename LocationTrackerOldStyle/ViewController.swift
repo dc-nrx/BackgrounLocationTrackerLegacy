@@ -1,20 +1,42 @@
 //
 //  ViewController.swift
-//  LocationTrackerOldStyle
+//  LocationTracker
 //
-//  Created by Dmytro Chapovskyi on 03.06.2020.
+//  Created by Dmytro Chapovskyi on 28.03.2020.
 //  Copyright © 2020 Dmytro Chapovskyi. All rights reserved.
 //
 
 import UIKit
+import CoreLocation
+
+typealias JSON = [String: Any?]
 
 class ViewController: UIViewController {
 
+	@IBOutlet private var textView: UITextView!
+	@IBOutlet private var deviceIdLabel: UILabel!
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view.
+			
+		onRefresh()
+		NotificationCenter.default.addObserver(forName: .loggerEntryAddedNotification, object: nil, queue: nil) { [weak self] (_) in
+			self?.onRefresh()
+		}
+		
+		deviceIdLabel.text = deviceId()
 	}
 
+	@IBAction func onRefresh(_ sender: Any? = nil) {
+		if !textView.isHidden {
+			textView.text = Logger.text
+		}
+	}
+	
+	@IBAction func onToggleLogShow(_ sender: Any? = nil) {
+		textView.isHidden = !textView.isHidden
+		textView.text = nil
+	}
 
 }
 

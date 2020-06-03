@@ -12,6 +12,10 @@
 		43ACBB1F24882D9800404E3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43ACBB1D24882D9800404E3C /* Main.storyboard */; };
 		43ACBB2124882D9A00404E3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43ACBB2024882D9A00404E3C /* Assets.xcassets */; };
 		43ACBB2424882D9A00404E3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43ACBB2224882D9A00404E3C /* LaunchScreen.storyboard */; };
+		43ACBB2F24882E2200404E3C /* BackgroundLocationTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ACBB2B24882E2100404E3C /* BackgroundLocationTracker.swift */; };
+		43ACBB3024882E2200404E3C /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ACBB2C24882E2100404E3C /* Logger.swift */; };
+		43ACBB3124882E2200404E3C /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ACBB2D24882E2100404E3C /* Helpers.swift */; };
+		43ACBB3224882E2200404E3C /* StoredProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ACBB2E24882E2200404E3C /* StoredProperty.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		43ACBB2024882D9A00404E3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43ACBB2324882D9A00404E3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43ACBB2524882D9A00404E3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43ACBB2B24882E2100404E3C /* BackgroundLocationTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundLocationTracker.swift; sourceTree = "<group>"; };
+		43ACBB2C24882E2100404E3C /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		43ACBB2D24882E2100404E3C /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		43ACBB2E24882E2200404E3C /* StoredProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoredProperty.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,10 @@
 				43ACBB2024882D9A00404E3C /* Assets.xcassets */,
 				43ACBB2224882D9A00404E3C /* LaunchScreen.storyboard */,
 				43ACBB2524882D9A00404E3C /* Info.plist */,
+				43ACBB2B24882E2100404E3C /* BackgroundLocationTracker.swift */,
+				43ACBB2D24882E2100404E3C /* Helpers.swift */,
+				43ACBB2C24882E2100404E3C /* Logger.swift */,
+				43ACBB2E24882E2200404E3C /* StoredProperty.swift */,
 			);
 			path = LocationTrackerOldStyle;
 			sourceTree = "<group>";
@@ -96,6 +108,11 @@
 				TargetAttributes = {
 					43ACBB1524882D9800404E3C = {
 						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -135,8 +152,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43ACBB2F24882E2200404E3C /* BackgroundLocationTracker.swift in Sources */,
+				43ACBB3224882E2200404E3C /* StoredProperty.swift in Sources */,
 				43ACBB1C24882D9800404E3C /* ViewController.swift in Sources */,
 				43ACBB1A24882D9800404E3C /* AppDelegate.swift in Sources */,
+				43ACBB3124882E2200404E3C /* Helpers.swift in Sources */,
+				43ACBB3024882E2200404E3C /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +304,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 82KW7WG8DY;
 				INFOPLIST_FILE = LocationTrackerOldStyle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,6 +322,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 82KW7WG8DY;
 				INFOPLIST_FILE = LocationTrackerOldStyle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
