@@ -14,6 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
 	
+	//MARK:- Configuration
+	
 	let enableBackgroundFetch = true
 	
 	let minimumBackgroundFetchInterval: TimeInterval = 30 //15 * 60

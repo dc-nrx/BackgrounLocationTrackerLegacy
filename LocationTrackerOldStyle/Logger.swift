@@ -46,6 +46,8 @@ extension Notification.Name {
 		print(recordString)
 		
 		Logger.saveToDisc()
+		
+		NotificationCenter.default.post(name: .loggerEntryAddedNotification, object: nil)
 	}
   
   @objc static func logAppLaunch() {
