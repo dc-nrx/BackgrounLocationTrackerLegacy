@@ -21,9 +21,9 @@ class BackgroundLocationTracker: NSObject {
 	
 	let trackSignificantLocationChange = true
 	 
-	let trackRegularLocationChange = false
+	let trackRegularLocationChange = true
 
-	let minimumActionInterval: TimeInterval = 60 // 15 * 60
+	let minimumActionInterval: TimeInterval = 15 * 60
 	
 	// Applicable only for `trackRegularLocationChange`.
 	let locationAccuracy: CLLocationAccuracy = kCLLocationAccuracyBestForNavigation

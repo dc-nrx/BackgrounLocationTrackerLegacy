@@ -21,7 +21,9 @@ class ViewController: UIViewController {
 			
 		onRefresh()
 		NotificationCenter.default.addObserver(forName: .loggerEntryAddedNotification, object: nil, queue: nil) { [weak self] (_) in
-			self?.onRefresh()
+			DispatchQueue.main.async {
+				self?.onRefresh()
+			}			
 		}
 		
 		deviceIdLabel.text = deviceId()

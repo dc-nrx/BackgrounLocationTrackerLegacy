@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	
 	let enableBackgroundFetch = true
 	
-	let minimumBackgroundFetchInterval: TimeInterval = 30 //15 * 60
+	let minimumBackgroundFetchInterval: TimeInterval = 15 * 60
 	
 	let urlString = "https://gtz-mobilehub-api-dev.azurewebsites.net/api/loads/34/gpsbulk"
 	
