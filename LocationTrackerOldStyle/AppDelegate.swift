@@ -24,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	
 	let apiKey = "aa57a8c49179781fd8f449a378e83f6c2f353e7a40b4ef6aab49a13df82a85bc"
 	
+	let useBackgroundTasksOnIOS13 = true
+	
 	//MARK:-
 	
 	private let bgTaskId = "dc.LocationTracker.sendLocation"
@@ -45,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		Logger.log("\(#function)")
 		
 		if enableBackgroundFetch {
-			if #available(iOS 13, *) {
+			if #available(iOS 13, *), useBackgroundTasksOnIOS13 {
 				// Modern
 				Logger.log("\(#function) - `BGTaskScheduler` flow")
 				BGTaskScheduler.shared.register(forTaskWithIdentifier: bgTaskId, using: nil) { task in
@@ -108,7 +110,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		Logger.log("\(#function)")
 		
 		if enableBackgroundFetch {
-			if #available(iOS 13, *) {
+			if #available(iOS 13, *), useBackgroundTasksOnIOS13 {
 				scheduleAppRefresh()
 			}
 		}
